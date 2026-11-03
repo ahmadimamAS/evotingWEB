@@ -1,0 +1,33 @@
+## TODO - Ubah Frontend jadi Vue (Opsi B: Full Vue) + Warna Utama Merah Muda
+
+- [ ] Tambah dependensi Vue ke `package.json`
+- [ ] Update `resources/js/app.js` untuk inisialisasi Vue dan render halaman berdasarkan `window.__PAGE_NAME__` + `window.__PAGE_PROPS__`
+- [ ] Tambahkan file Vue app/pages:
+    - [ ] `resources/js/vue/app.js`
+    - [ ] `resources/js/vue/pages/*` (minimal placeholder dulu)
+- [ ] Update layout public:
+    - [ ] `resources/views/layouts/app.blade.php` (mount point Vue + tema pink, injeksi props/page name)
+- [ ] Update layout admin:
+    - [ ] `resources/views/admin/layout.blade.php` (mount point Vue + tema pink, injeksi props/page name)
+- [ ] Ubah semua Blade halaman menjadi wrapper Vue (tanpa mengubah controller logic):
+    - [ ] `resources/views/welcome.blade.php`
+    - [ ] `resources/views/informasi.blade.php`
+    - [ ] `resources/views/kandidat.blade.php`
+    - [ ] `resources/views/profil.blade.php`
+    - [ ] `resources/views/siswa/dashboard.blade.php`
+    - [ ] `resources/views/siswa/voting.blade.php`
+    - [ ] `resources/views/siswa/status.blade.php`
+    - [ ] `resources/views/admin/dashboard.blade.php`
+    - [ ] `resources/views/admin/kandidat/index.blade.php`
+    - [ ] `resources/views/admin/siswa/index.blade.php`
+    - [ ] `resources/views/admin/pengaturan.blade.php`
+    - [ ] `resources/views/admin/hasil.blade.php`
+    - [ ] `resources/views/auth/siswa-login.blade.php`
+    - [ ] `resources/views/auth/siswa-registrasi.blade.php`
+    - [ ] `resources/views/auth/admin-login.blade.php`
+- [ ] Pastikan styling warna utama menjadi merah muda:
+    - [ ] Override `.btn-primary`, navbar, badge, dan variabel warna
+- [ ] Jalankan build/dev & test semua route di `routes/web.php`
+    - [ ] `/`, `/profil`, `/informasi`, `/kandidat`
+    - [ ] `/siswa/login`, `/siswa/registrasi`, `/siswa/dashboard`, `/siswa/voting`, `/siswa/status`
+    - [ ] `/admin/login`, `/admin/dashboard`, `/admin/*`

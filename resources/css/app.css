@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    /* Theme warna utama merah muda (pink) */
+    --color-primary: #ff4fb3;
+    --color-secondary: #ff7ac1;
+    --color-accent: #ffb3d9;
+}
+
+:root {
+    --primary-color: #ff4fb3;
+    --secondary-color: #ff7ac1;
+    --accent-color: #ffb3d9;
+
+    --highlight-gold: #ffd700;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --dark-color: #0a1428;
+    --light-color: #ffffff;
+    --shadow-blue: rgba(255, 79, 179, 0.25);
+    --shadow-gold: rgba(218, 165, 32, 0.4);
+}
+
+/* Override Bootstrap supaya warna utama jadi pink */
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    ) !important;
+    border: 2px solid var(--accent-color) !important;
+    color: var(--light-color) !important;
+    font-weight: 600 !important;
+    border-radius: 25px !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(
+        135deg,
+        var(--accent-color),
+        var(--highlight-gold)
+    ) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--highlight-gold) !important;
+    box-shadow: 0 8px 25px var(--shadow-gold) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Badge yang pakai bg-primary ikut pink */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Navbar & elemen yang pakai .navbar */
+.navbar {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--dark-color)
+    ) !important;
+    box-shadow: 0 4px 20px var(--shadow-blue) !important;
+}
+
+/* Supaya teks link hover tetap selaras */
+.nav-link:hover {
+    color: var(--highlight-gold) !important;
+}
